@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>账号批发 | 零售-最好的网站-99账号平台</title>
+  <meta name="keywords" content="社交媒体批发,多平台批发,专业批发团队,高品质批发,稳定供应">
+  <meta name="description" content="99是最好的最大的联盟平台,包安全包售后,童叟无欺.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="static/img/Frame.png">
+  <meta property="og:title" content="批发 | 零售-最好的购买网站-99联盟平台">
+  <meta property="og:description" content="99平台是目前最大的联盟平台,包安全包售后,童叟无欺.">
+  <meta property="og:release_date" content="2023-01-21 09:19:25">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self';">
+  <link rel="stylesheet" href="./static/css/common.css" />
+  <link rel="stylesheet" href="./static/css/index.css" />
+  <script src="./static/js/common.js"></script>
+</head>
+<body>
+  <div class="top">
+    <img src="./static/img/logo.png" alt="logo" class="logo" />
+    <span class="title">99联盟平台</span>
+  </div>
+  <div class="slogan"></div>
+  <div class="page">
+    <div class="merchant">
+      <div class="title">商户信息</div>
+      <div class="flex merchant">
+        <div class="name">商户名称</div>
+        <div class="info">99联盟平台</div>
+      </div>
+      <div class="flex service">
+        <div class="name">Telgram客服</div>
+        <a href="https://t.me/pt99bot" class="info">https://t.me/pt99bot</a>
+      </div>
+    </div>
+    <div class="notice">
+      <div class="lf">
+        <img src="./static/img/notice.png" alt="" class="icon-notice" />
+        <div class="gg">公告</div>
+      </div>
+      <div class="info" style="visibility: hidden;">所有商品下单前请先少量购买测试,暂停支付宝微信收款，改用USDT收款，拍下之后通过邮箱自动发货，售后请联系电报@pt99bot.
+      </div>
+    </div>
+    <div class="choose">
+      <div class="title">选择商品</div>
+      <div class="item">
+        <div class="name" required>商品分类</div>
+        <div class="value verify">
+          <select name="classify" id="classify" onchange="chooseClassify(this.value)">
+          </select>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name" required>商品名称</div>
+        <div class="value verify">
+          <select name="product" id="productName" onchange="chooseProduct(this.value)">
+          </select>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name" required>选择国家</div>
+        <div class="value verify">
+          <select name="country" id="country" onchange="chooseCountry(this.value)">
+          </select>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">商品单价</div>
+        <div class="value">
+          <div class="sub">
+            <img src="./static/img/subtract.png" alt="-" />
+          </div>
+          <div class="num" id="unitPrice">-</div>
+          <div class="add">
+            <img src="./static/img/add.png" alt="+" />
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">商品库存</div>
+        <div class="value">
+          <div class="sub">
+            <img src="./static/img/subtract.png" alt="-" />
+          </div>
+          <div class="num" id="stock">-</div>
+          <div class="add">
+            <img src="./static/img/add.png" alt="+" />
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name" required>购买数量</div>
+        <div class="value">
+          <div class="sub">
+            <img src="./static/img/subtract.png" alt="-" onclick="changeNum(-1)" />
+          </div>
+          <div class="num" id="quantity">1</div>
+          <div class="add">
+            <img src="./static/img/add.png" alt="+" onclick="changeNum(1)" />
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">指定性别</div>
+        <div class="value">
+          <div class="radio">
+            <input type="radio" name="sex" value="0" id="rng" checked />
+          </div>
+          <label for="rng">随机</label>
+          <div class="radio">
+            <input type="radio" name="sex" value="1" class="radio" id="man" />
+          </div>
+          <label for="man">男</label>
+          <div class="radio">
+            <input type="radio" name="sex" value="2" class="radio" id="women" />
+          </div>
+          <label for="women">女</label>
+        </div>
+      </div>
+      <div class="item email-item">
+        <div class="name" required>邮箱</div>
+        <div class="value">
+          <input type="email" class="email" id="emailEl" placeholder="下单后系统自动发送卡密到该邮箱" onblur="emailBlur(this.value)" />
+        </div>
+      </div>
+      <div class="hint"></div>
+      <div class="order">
+        <div class="total">
+          <div class="text">总金额</div>
+          <div class="price">
+            <span class="num" id="total">0.00</span>
+            USDT
+          </div>
+        </div>
+        <div class="place" onclick="goPay()">立即下单</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./static/js/index.js"></script>
+</body>
+</html>
